@@ -1,39 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="/assets/style.css">
-        <script src="/assets/script.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Complete de acordo com a tabela verdade:</h1>
-        <p>Killer queen</p>
-        <select name="cars" id="cars">
-            <option value="and">and</option>
-            <option value="or">or</option>
-            <option value="menotrcedes">not</option>
-          </select>
-        <p>loverboy</p>
-
-        <table>
-            <tr>
-              <th>Verdadeiro</th>
-              <th>Falso</th>
-              <th>Resultado</th>
-            </tr>
-            <tr>
-              <td>V </td>
-              <td>V</td>
-              <td>F</td>
-            </tr>
-            <tr>
-              <td>F</td>
-              <td>F</td>
-              <td>F</td>
-            </tr>
-          </table>
-
-    </body>
+<html>
+  <head>
+    <title>Tabela Verdade</title>
+  </head>
+  <body>
+    <div class="container">
+      <span>Loverboy</span>
+      <select id="mySelect">
+        <option value="0"></option>
+        <option value="1">And</option>
+        <option value="2">Or</option>
+      </select>
+      <span>killer Queen</span>
+    </div>
+    <table style="width: 100%; margin: 0 auto">
+      <tr>
+        <th>Killer queen</th>
+        <th>LoverBoy</th>
+        <th>Afirmação</th>
+      </tr>
+      <tr>
+        <td>Verdadeiro</td>
+        <td>Verdadeiro</td>
+        <td id="primeiraLinha"></td>
+      </tr>
+      <tr>
+        <td>Verdadeiro</td>
+        <td>Falso</td>
+        <td id="segundaLinha"></td>
+      </tr>
+      <tr>
+        <td>Falso</td>
+        <td>Verdadeiro</td>
+        <td id="terceiraLinha"></td>
+      </tr>
+      <tr>
+        <td>Falso</td>
+        <td>Falso</td>
+        <td id="quartaLinha"></td>
+      </tr>
+    </table>
+    <div class="container">
+    <button onclick="fillLastColumn()">Verifique as afirmações</button>
+    </div>
+    <script>
+      var mySelect = document.getElementById("mySelect");
+      mySelect.addEventListener("change", function () {
+        var selectedText = this.options[this.selectedIndex].text;
+        if (selectedText === "And") {
+          console.log();
+          document.getElementById("primeiraLinha").innerHTML = "Verdadeiro";
+          document.getElementById("segundaLinha").innerHTML = "Falso";
+          document.getElementById("terceiraLinha").innerHTML = "Falso";
+          document.getElementById("quartaLinha").innerHTML = "Falso";
+        }
+        if (selectedText === "Or") {
+          console.log();
+          document.getElementById("primeiraLinha").innerHTML = "Verdadeiro";
+          document.getElementById("segundaLinha").innerHTML = "Verdadeiro";
+          document.getElementById("terceiraLinha").innerHTML = "Verdadeiro";
+          document.getElementById("quartaLinha").innerHTML = "Falso";
+        }
+      });
+      function fillLastColumn() {
+        mySelect = document.getElementById("mySelect");
+        selectedText =
+          mySelect.options[mySelect.options.selectedIndex].innerHTML;
+        if (selectedText === "And") {
+          document.getElementById("primeiraLinha").style.backgroundColor =
+            "Green";
+          document.getElementById("segundaLinha").style.backgroundColor =
+            "Green";
+          document.getElementById("terceiraLinha").style.backgroundColor =
+            "Green";
+          document.getElementById("quartaLinha").style.backgroundColor =
+            "Green";
+        } else {
+          document.getElementById("primeiraLinha").style.backgroundColor =
+            "Red";
+          document.getElementById("segundaLinha").style.backgroundColor = "Red";
+          document.getElementById("terceiraLinha").style.backgroundColor =
+            "Red";
+          document.getElementById("quartaLinha").style.backgroundColor = "Red";
+        }
+      }
+    </script>
+  </body>
 </html>
+<style>
+span, select, span {
+    display: inline-block;
+}
+
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+</style>
