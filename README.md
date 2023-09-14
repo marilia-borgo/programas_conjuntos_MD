@@ -1,36 +1,20 @@
+# Programas de Matemática Discreta
 
-Tabela Verdade
+Esste repo foi feito para a entrega dos exercícios de programação, baseados no conceitos aprendidos nas aulas de matemática discreta na Fatec no 2º semestre de 2023.
 
-Este projeto tem como objetivo apresentar as condicionais mais básicas da lógica proposicional: AND e OR.
+## índice dos programas:
 
-Para isso, ele utiliza tabelas verdade, que são ferramentas que permitem calcular o valor de uma proposição composta, dada a verdade ou falsidade das proposições simples que a compõem.
+Programa que calcula a fatorial de um determinado número utilizando o conjunto dos número naturais menores que ele mesmo.
+* [fatorial](fatorial.py)
 
-O projeto está disponível para acesso no site https://marilia-borgo.github.io/tabela_verdade/.
+Programa que gera a tabela verdade, dependendo do input do usário (E ou OU)
+* [tabela_verdade](gera_tabelas_verdade.py)
 
-Como funciona
+Programa que mostra algumas operações com conjuntos (intersecção, união, diferença)
+* [operações_conjuntos](operacoes_conjuntos.py)
 
-O site apresenta uma breve introdução à lógica proposicional e às tabelas verdade. Em seguida, ele apresenta as tabelas verdade para as condicionais AND e OR.
+Programas que gera todos os subconjuntos possíveis de determinado conjunto
+* [operações_conjuntos](subconjuntos_de_um_conjunto.py)
 
-Para cada tabela, o site mostra os valores de verdade das proposições simples, bem como o valor de verdade da proposição composta.
-
-Exemplos
-
-Aqui estão alguns exemplos de como as tabelas verdade podem ser usadas:
-
-Considere a proposição composta "A AND B". A tabela verdade para essa proposição é a seguinte:
-A | B | A AND B
--- | -- | --
-V | V | V
-V | F | F
-F | V | F
-F | F | F
-Esta tabela nos diz que a proposição "A AND B" é verdadeira apenas quando A e B são verdadeiras.
-
-Considere a proposição composta "A OR B". A tabela verdade para essa proposição é a seguinte:
-A | B | A OR B
--- | -- | --
-V | V | V
-V | F | V
-F | V | V
-F | F | F
-Esta tabela nos diz que a proposição "A OR B" é verdadeira quando A é verdadeira, quando B é verdadeira, ou quando A e B são verdadeiras.
+Site estático em html que tem um "joguinho" para acertar a condição pra a tabela verdade ser correta
+* [operações_conjuntos](tabela_verdade.html)
