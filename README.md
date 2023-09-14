@@ -14,7 +14,7 @@ Esste repo foi feito para a entrega dos exercícios de programação, baseados n
 * [operações_conjuntos](operacoes_conjuntos.py)
 
 4 - Programas que gera todos os subconjuntos possíveis de determinado conjunto
-* [operações_conjuntos](subconjuntos_de_um_conjunto.py)
+* [subconjuntos de um conjunto](subconjuntos_de_um_conjunto.py)
 
 5 - Site estático em html que tem um "joguinho" para acertar a condição pra a tabela verdade ser correta
-* [operações_conjuntos](tabela_verdade.html)
+* [joguinho tabela verdade](tabela_verdade.html)
