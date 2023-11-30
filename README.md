@@ -18,3 +18,8 @@ Esste repo foi feito para a entrega dos exercícios de programação, baseados n
 
 5 - Site estático em html que tem um "joguinho" para acertar a condição pra a tabela verdade ser correta
 * [joguinho tabela verdade](tabela_verdade.html)
+
+## Entregas Segunda Prova
+
+* [calcula_p(n)_recursivamente](codigo_calcula_p(n).py)
+* [verifica_numeros_primos](calcula_se_o_numero_eh_primo.py)
